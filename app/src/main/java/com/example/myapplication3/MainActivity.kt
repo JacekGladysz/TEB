@@ -18,6 +18,19 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        var number = 0
+
+    var textField = findViewById<TextView>(R.id.text_field)
+    var plus = findViewById<Button>(R.id.plus_button)
+    var minus = findViewById<Button>(R.id.minus_button)
+
+    plus.setOnClickListener{
+        number++
+            textField.text = "$number"
+    }
+
+
+/*
     var button4 = findViewById<Button>(R.id.button4)
      button4.setOnClickListener{
         println("klik")
@@ -28,6 +41,6 @@ class MainActivity : AppCompatActivity() {
 
     var textField = findViewById<TextView>(R.id.text_field)
     textField = "to też jest tekst z kodu"
-
+*/
     }
 }
