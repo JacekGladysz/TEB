@@ -1,6 +1,7 @@
 package com.example.myapplication3
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+    var button4 = findViewById<Button>(R.id.button4)
+     button4.setOnClickListener{
+        println("klik")
+
+        Toast.makeText(context: this, text: "hura", Toast.LENGTH_SHORT).show()
+        textField.text = "tekst wpisany z listenera"
+    }
+
+    var textField = findViewById<TextView>(R.id.text_field)
+    textField = "to też jest tekst z kodu"
+
     }
 }
